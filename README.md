@@ -22,3 +22,5 @@ berdasarkan gender dan kategori umur (months inactive 12 month)
 
 7. Hubungan banyak tanggungan (dependent count) dgn
 total pengeluaran
+
+SOURCE DATA : https://www.kaggle.com/datasets/sakshigoyal7/credit-card-customers
