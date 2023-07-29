@@ -1,39 +1,34 @@
 select * from bankchurners;
 
--- rata2 Jangka waktu hubungan dengan bank (months on book) 
--- berdasarkan kategori kartu 
+-- 1. Average month on book by card category.
 
 select card_category, avg(months_on_book) as avg_months_on_book
 from bankchurners
 group by Card_Category
 order by avg_months_on_book;
 
--- Jumlah total. produk yang dimiliki oleh pelanggan (Total relationship count)
--- berdasarkan pendidikan 
+-- 2. Average total relationship count by Education level.
 
 select education_level, sum(total_relationship_count) as total_relationship_count
 from bankchurners
 group by education_level
 order by total_relationship_count;
 
--- jenis kartu kredit yang paling banyak 
--- melakukan transaksi dalam 12 bulan terakhir (total_trans_ct)
+-- 3. Most highly total trans ct by card category.
 
 select card_category, avg(total_trans_ct) avg_trans, sum(total_trans_ct) sum_trans
 from bankchurners
 group by Card_Category
 order by avg_trans;
 
--- hubungan gender dan jenis kartu kredit terhdap
--- jumlah transaksi yang dilakukan dalam 12 bulan
--- terakhir (total trans ct)
+-- 4. Relationship between gender and card category against total trans ct.
 
 select card_category, gender, avg(total_trans_ct) avg_trans, sum(total_trans_ct) sum_trans
 from bankchurners
 group by Card_Category, gender
 order by Card_Category, gender;
 
--- rerata limit kredit (credit limit) berdasarkan kategori usia
+-- 5. Average credit limit by age category.
 select 
 case
 when customer_age < 30 then "young"
@@ -45,8 +40,7 @@ from bankchurners
 group by age_criteria
 order by avg_credit_limit;
 
--- rerata Jumlah bulan tidak aktif dalam 12 bulan terakhir
--- berdasarkan gender dan kategori umur (months inactive 12 month)
+-- 6. Average months inactive by gender and age category.
 
 select
 case
@@ -60,8 +54,7 @@ from bankchurners
 group by age_category, gender
 order by age_category, gender;
 
--- hubungan banyak tanggungan (dependent count) dgn
--- total pengeluaran (total trans amt)
+-- 7. Relationship dependent count with total trans amt.
 
 select dependent_count, avg(total_trans_amt) as avg_trans_amt, 
 						sum(total_trans_amt) as sum_trans_amt,
