@@ -1,7 +1,5 @@
 # Desc
 
-Disini saya membuat skenario yang berisikan beberapa pertanyaan terkait data yang ada, dimana saya akan menjawab pertanyaan-pertanyaan tersebut.
-
 1. Average month on book by card category.
 2. Average total relationship count by Education level.
 3. Most highly total trans ct by card category.
