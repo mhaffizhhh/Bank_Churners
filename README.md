@@ -12,4 +12,6 @@ Here I do several queries, namely:
 Result can be seen [Query](https://github.com/mhaffizhhh/query2/blob/main/answer.sql) and [Dashboard](https://github.com/mhaffizhhh/query2/blob/main/Dashboard_Query_2.pdf).
 
 ## Dataset
-[Data](https://github.com/mhaffizhhh/query2/blob/main/BankChurners.csv) source: https://www.kaggle.com/datasets/sakshigoyal7/credit-card-customers
+[Data](https://github.com/mhaffizhhh/query2/blob/main/BankChurners.csv).
+
+[Source](https://www.kaggle.com/datasets/sakshigoyal7/credit-card-customers).
